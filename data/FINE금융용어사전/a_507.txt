@@ -1,2 +1,0 @@
-경기대응적 규제 [Counter-Cyclical Regulation] 
-경기대응적 규제는 경기순응성에 따라 시스템리스크가 증가하고 금융위기 발생가능성을 축소하기 위해 신용팽창기(credit boom)에는 강도높게 신용경색기(credit crunch)에는 느슨하게 시스템적으로 중요한 금융회사 또는 금융시스템 전체를 규제하는 것이다. 은행에 대하여 신용팽창기에 완충자본(capital buffer)을 적립하도록 요구하는 것이 대표적인 사례이다. 또한 LTV(loan-to-value) 또는 DTI(debt-to-income) 규제도 경기대응적으로 설정할 수 있다. 

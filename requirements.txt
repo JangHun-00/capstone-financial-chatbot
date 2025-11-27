@@ -1,0 +1,20 @@
+# --- Core Framework ---
+streamlit>=1.34.0
+
+# --- LangChain ---
+# langchain 0.2.17 버전을 기준으로 합니다.
+langchain==0.2.17
+langchain-core
+langchain-community
+langchain-openai
+langchain-text-splitters
+
+# --- Vector Store & Embeddings ---
+# Mac(Apple Silicon) 로컬 개발 시에는 Conda로 설치하는 것을 강력 권장합니다.
+# Window 로컬 개발 시에는 faiss-cpu 주석을 지우고 설치하세요.
+# faiss-cpu
+
+# --- Utilities ---
+pypdf
+python-dotenv
+tiktoken
