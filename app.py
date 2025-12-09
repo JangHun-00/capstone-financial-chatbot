@@ -407,19 +407,26 @@ def process_response(user_input):
 def handle_user_input():
     if len(st.session_state.messages) == 1:
         st.markdown("### 💡 이런 질문은 어때요?")
-        col1, col2, col3 = st.columns(3)
+
+        recommendations = [
+            "휴면예금 조회 방법 알려줘",
+            "퇴직연금 실물이전이 뭐야?",
+            "연금저축 중도인출 시 세금은?",
+            "금리인하요구권 신청 자격은?",
+            "ISA 계좌의 장점이 뭐야?",
+            "신용점수 올리는 방법 알려줘",
+            "보이스피싱 대처 요령은?",
+            "예금자보호제도 한도는 얼마야?",
+            "내 계좌 한눈에 서비스가 뭐야?",
+            "착오송금 반환지원제도란?"
+        ]
         
-        if col1.button("휴면예금 조회 방법 알려줘", use_container_width=True):
-            process_response("휴면예금 조회 방법 알려줘")
-            st.rerun() 
-            
-        if col2.button("퇴직연금 실물이전이 뭐야?", use_container_width=True):
-            process_response("퇴직연금 실물이전이 뭐야?")
-            st.rerun()
-            
-        if col3.button("연금저축 중도인출 세금은?", use_container_width=True):
-            process_response("연금저축 중도인출 시 세금은 어떻게 돼?")
-            st.rerun()
+        cols = st.columns(2)
+        
+        for i, question in enumerate(recommendations):
+            if cols[i % 2].button(question, use_container_width=True):
+                process_response(question)
+                st.rerun()
 
     user_input = st.chat_input("금융 관련 질문을 입력하세요 (예: ISA 계좌 장점이 뭐야?)")
     
