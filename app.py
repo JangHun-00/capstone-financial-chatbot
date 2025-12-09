@@ -316,12 +316,18 @@ def display_source_item(source, search_query=""):
                 term = "_".join(parts[2:]) 
             else:
                 term = name_body
+                
+            display_term = term.replace("_", " ")
+            encoded_term = urllib.parse.quote(display_term)
+            
         except:
-            term = file_name
+            display_term = file_name
+            encoded_term = urllib.parse.quote(file_name)
+            
 
         base_url = "https://fine.fss.or.kr/fine/fnctip/fncDicary/list.do?menuNo=900021"
-        search_url = f"{base_url}&searchCnd=2&searchStr={term}"
-        st.markdown(f"- 📘 **[FINE 금융용어사전: '{term}']({search_url})**")
+        search_url = f"{base_url}&searchCnd=2&searchStr={encoded_term}"
+        st.markdown(f"- 📘 **[FINE 금융용어사전: '{display_term}']({search_url})**")
 
     elif "금융꿀팁" in source or ("c_" in file_name and ".pdf" in file_name):
         try:
