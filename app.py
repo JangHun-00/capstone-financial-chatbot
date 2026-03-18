@@ -263,7 +263,7 @@ def render_sidebar():
         is_expanded = False
         with st.expander("🔐 API Key 설정", expanded=is_expanded):
             with st.form("api-key-form", clear_on_submit=False):
-                api_key_input = st.text_input("API Key 입력", type="password")
+                api_key_input = st.text_input("새 API Key 입력", type="password")
                 if st.form_submit_button("저장"):
                     st.session_state.api_key = api_key_input.strip()
                     st.rerun()
